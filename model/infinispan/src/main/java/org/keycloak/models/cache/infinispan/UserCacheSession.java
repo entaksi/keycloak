@@ -193,7 +193,7 @@ public class UserCacheSession implements CacheUserProvider {
     @Override
     public UserModel getUserByUsername(String username, RealmModel realm) {
         logger.tracev("getUserByUsername: {0}", username);
-        username = username.toLowerCase();
+//        username = username.toLowerCase();
         if (realmInvalidations.contains(realm.getId())) {
             logger.tracev("realmInvalidations");
             return getDelegate().getUserByUsername(username, realm);
